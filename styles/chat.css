@@ -11,6 +11,7 @@
     right: 1rem;
   }
 }
+
 .chat-button {
   width: 60px;
   height: 60px;
@@ -52,6 +53,7 @@
     height: 24px;
   }
 }
+
 .chat-window {
   position: absolute;
   bottom: 80px;
@@ -84,6 +86,7 @@
     right: 0;
   }
 }
+
 .chat-header {
   background: linear-gradient(135deg, #0D0A0B 0%, #454955 100%);
   color: #F3EFF5;
@@ -121,6 +124,7 @@
   width: 20px;
   height: 20px;
 }
+
 .chat-messages {
   flex: 1;
   overflow-y: auto;
@@ -144,6 +148,7 @@
 .chat-messages::-webkit-scrollbar-thumb:hover {
   background: #72B01D;
 }
+
 .message {
   display: flex;
   margin-bottom: 0.5rem;
@@ -183,6 +188,7 @@
 .message.typing .message-content span:nth-child(3) {
   animation-delay: 0.4s;
 }
+
 @keyframes typing {
   0%, 60%, 100% {
     transform: translateY(0);
@@ -200,6 +206,7 @@
   font-size: 0.95rem;
   word-wrap: break-word;
 }
+
 .chat-input-area {
   padding: 1rem 1.5rem;
   background: white;
@@ -208,6 +215,7 @@
   gap: 0.75rem;
   align-items: flex-end;
 }
+
 .chat-input {
   flex: 1;
   border: 2px solid rgba(69, 73, 85, 0.2);
@@ -224,9 +232,13 @@
   border-color: #72B01D;
   box-shadow: 0 0 0 3px rgba(114, 176, 29, 0.1);
 }
+.chat-input::-moz-placeholder {
+  color: rgba(69, 73, 85, 0.5);
+}
 .chat-input::placeholder {
   color: rgba(69, 73, 85, 0.5);
 }
+
 .send-button {
   width: 44px;
   height: 44px;
@@ -256,5 +268,4 @@
   width: 20px;
   height: 20px;
   fill: white;
-}
-
+}/*# sourceMappingURL=chat.css.map */

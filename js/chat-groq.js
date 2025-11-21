@@ -1,14 +1,7 @@
-
-
 $(document).ready(function() {
-
-    // ========================================
-    // CONFIGURATION
-    // ========================================
     const GROQ_API_KEY = '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';
-    const GROQ_MODEL = 'llama-3.1-8b-instant'; // Options: 'llama-3.1-8b-instant', 'mixtral-8x7b-32768', 'gemma-7b-it'
+    const GROQ_MODEL = 'llama-3.1-8b-instant';
     
-    // Chatbot Instructions - Customize how the AI behaves
     const CHATBOT_INSTRUCTIONS = `Eres el asistente virtual de Centro Arcadia, un centro comercial moderno.
 
 INSTRUCCIONES:
@@ -29,12 +22,10 @@ INSTRUCCIONES:
     * RECursion
     * Katana No Neko (o KNK)
 - No inventes información que no sepas con certeza`;
-    // ========================================
 
     let conversationHistory = [];
     let isLoading = false;
 
-    // DOM elements
     const $chatWidget = $('.chat-widget');
     const $chatButton = $('.chat-button');
     const $chatWindow = $('.chat-window');
@@ -43,7 +34,6 @@ INSTRUCCIONES:
     const $sendButton = $('.send-button');
     const $closeButton = $('.chat-close');
 
-    // Toggle chat window
     $chatButton.on('click', function() {
         $chatWindow.toggleClass('open');
         $chatButton.toggleClass('active');
@@ -70,20 +60,16 @@ INSTRUCCIONES:
             return;
         }
 
-
         addMessage(message, 'user');
         $chatInput.val('');
         
-
         isLoading = true;
         showTypingIndicator();
 
         callGroqAPI(message);
     }
 
-
     $sendButton.on('click', sendMessage);
-
 
     $chatInput.on('keypress', function(e) {
         if (e.which === 13 && !e.shiftKey) {
@@ -92,7 +78,6 @@ INSTRUCCIONES:
         }
     });
 
-
     function addMessage(text, sender) {
         const $messageDiv = $('<div>').addClass('message').addClass(sender);
         const $messageContent = $('<div>').addClass('message-content').text(text);
@@ -100,7 +85,6 @@ INSTRUCCIONES:
         $chatMessages.append($messageDiv);
         scrollToBottom();
     }
-
 
     function showTypingIndicator() {
         const $typingDiv = $('<div>').addClass('message bot typing');
@@ -111,25 +95,19 @@ INSTRUCCIONES:
         scrollToBottom();
     }
 
-
     function removeTypingIndicator() {
         $chatMessages.find('.typing').remove();
     }
-
 
     function scrollToBottom() {
         $chatMessages.scrollTop($chatMessages[0].scrollHeight);
     }
 
-
     function callGroqAPI(userMessage) {
         const apiUrl = 'https://api.groq.com/openai/v1/chat/completions';
         
-
         const messages = [];
         
-
-        // Add system instructions
         messages.push({
             role: 'system',
             content: CHATBOT_INSTRUCTIONS
@@ -144,7 +122,6 @@ INSTRUCCIONES:
             });
         });
         
-        // Add current user message
         messages.push({
             role: 'user',
             content: userMessage
@@ -185,10 +162,8 @@ INSTRUCCIONES:
 
             const botResponse = data.choices?.[0]?.message?.content || 'Lo siento, no pude generar una respuesta.';
 
-
             addMessage(botResponse.trim(), 'bot');
             
-
             conversationHistory.push({ role: 'user', content: userMessage });
             conversationHistory.push({ role: 'assistant', content: botResponse.trim() });
         })
@@ -201,7 +176,6 @@ INSTRUCCIONES:
         });
     }
 
-    // Initialize with welcome message
     setTimeout(function() {
         if (GROQ_API_KEY) {
             addMessage('¡Hola! 👋 Soy el asistente virtual de Centro Arcadia. ¿En qué puedo ayudarte hoy? Puedo ayudarte con información sobre tiendas, horarios, eventos y más.', 'bot');

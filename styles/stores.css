@@ -1,0 +1,231 @@
+.stores-page {
+  background-color: #F3EFF5;
+  padding: 4rem 2rem;
+  min-height: 80vh;
+}
+.stores-page-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.stores-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #3F7D20;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: "Lugrasimo", cursive;
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0;
+  box-sizing: border-box;
+}
+.stores-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(114, 176, 29, 0.3) 0%, rgba(114, 176, 29, 0.5) 50%, rgba(114, 176, 29, 0.3) 100%);
+  border-radius: 10px;
+  z-index: -1;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .stores-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding: 0.4rem 0;
+  }
+  .stores-title::before {
+    max-width: 90%;
+  }
+}
+
+.stores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 968px) {
+  .stores-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .stores-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.store-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+.store-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(63, 125, 32, 0.2);
+}
+.store-card:hover .store-card-image img {
+  transform: scale(1.1);
+}
+.store-card:hover .store-card-name {
+  color: #72B01D;
+}
+.store-card:focus {
+  outline: 3px solid #72B01D;
+  outline-offset: 4px;
+}
+
+.store-card-image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #F3EFF5 0%, white 100%);
+}
+@media (max-width: 768px) {
+  .store-card-image {
+    height: 220px;
+  }
+}
+@media (max-width: 576px) {
+  .store-card-image {
+    height: 200px;
+  }
+}
+.store-card-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.store-card-promo-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.95) 0%, rgba(255, 69, 0, 0.95) 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
+  font-family: "Lugrasimo", cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: pulse 2s infinite;
+}
+@media (max-width: 576px) {
+  .store-card-promo-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.75rem;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(255, 0, 0, 0.6);
+  }
+}
+.store-card-info {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .store-card-info {
+    padding: 1.25rem;
+  }
+}
+@media (max-width: 576px) {
+  .store-card-info {
+    padding: 1rem;
+  }
+}
+
+.store-card-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3F7D20;
+  margin-bottom: 0.75rem;
+  font-family: "Lugrasimo", cursive;
+  transition: color 0.3s ease;
+}
+@media (max-width: 768px) {
+  .store-card-name {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .store-card-name {
+    font-size: 1.125rem;
+  }
+}
+
+.store-card-description {
+  font-size: 1rem;
+  color: #454955;
+  line-height: 1.6;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .store-card-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 576px) {
+  .store-card-description {
+    font-size: 0.9rem;
+  }
+}
+
+.stores-loading {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #454955;
+  font-size: 1.25rem;
+}
+
+.stores-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #454955;
+  font-size: 1.25rem;
+}
+.stores-empty p {
+  margin-bottom: 1rem;
+}/*# sourceMappingURL=stores.css.map */

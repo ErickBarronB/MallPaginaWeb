@@ -1,4 +1,3 @@
-// Carousel functionality for stores
 $(document).ready(function() {
     let currentSlide = 0;
     const slides = $('.carousel-slide');
@@ -16,18 +15,15 @@ $(document).ready(function() {
         $('.carousel-track').css('transform', `translateX(${translateX}%)`);
     }
 
-
     function nextSlide() {
         currentSlide = (currentSlide + 1) % totalSlides;
         updateCarousel();
     }
 
-
     function prevSlide() {
         currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
         updateCarousel();
     }
-
 
     function goToSlide(index) {
         currentSlide = index;
@@ -42,7 +38,6 @@ $(document).ready(function() {
         const slideIndex = $(this).data('slide');
         goToSlide(slideIndex);
     });
-
 
     let autoPlayInterval = setInterval(nextSlide, 5000);
 
@@ -62,7 +57,6 @@ $(document).ready(function() {
         }
     });
 
-
     let touchStartX = 0;
     let touchEndX = 0;
 
@@ -79,15 +73,12 @@ $(document).ready(function() {
         const swipeThreshold = 50; 
 
         if (touchEndX < touchStartX - swipeThreshold) {
-            // Swipe left - next slide
             nextSlide();
         } else if (touchEndX > touchStartX + swipeThreshold) {
-
             prevSlide();
         }
     }
 
-    // Initialize carousel on page load
     updateCarousel();
 });
 

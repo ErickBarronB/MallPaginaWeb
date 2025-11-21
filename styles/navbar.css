@@ -92,15 +92,32 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  outline: none;
+  box-sizing: border-box;
 }
 .navbar-actions .search-btn:hover {
   background: #72B01D;
   border-color: #72B01D;
   color: #0D0A0B;
   transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(114, 176, 29, 0.3);
 }
 .navbar-actions .search-btn:active {
   transform: scale(0.95);
+}
+.navbar-actions .search-btn:focus {
+  outline: 2px solid #72B01D;
+  outline-offset: 2px;
+}
+.navbar-actions .search-btn svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  pointer-events: none;
 }
 .navbar-actions .menu-toggle {
   display: none;

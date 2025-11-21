@@ -1,11 +1,9 @@
-// Color Palette Variables (same as navbar)
 $onyx: #0D0A0B;
 $charcoal-blue: #454955;
 $lavender-mist: #F3EFF5;
 $lime-moss: #72B01D;
 $green: #3F7D20;
 
-// Footer Styles
 .footer {
   background: linear-gradient(180deg, $charcoal-blue 0%, $onyx 100%);
   color: $lavender-mist;
@@ -62,7 +60,6 @@ $green: #3F7D20;
     font-size: 0.95rem;
   }
 
-  // Social Media Links
   &-social {
     display: flex;
     gap: 1rem;
@@ -100,7 +97,6 @@ $green: #3F7D20;
     }
   }
 
-  // Links Lists
   &-list {
     list-style: none;
     padding: 0;
@@ -141,7 +137,6 @@ $green: #3F7D20;
     }
   }
 
-  // Contact Information
   &-contact-list {
     list-style: none;
     padding: 0;
@@ -181,7 +176,6 @@ $green: #3F7D20;
     }
   }
 
-  // Footer Bottom
   &-bottom {
     border-top: 1px solid rgba(243, 239, 245, 0.2);
     padding-top: 1.5rem;
@@ -196,7 +190,6 @@ $green: #3F7D20;
   }
 }
 
-// Responsive Design
 @media (max-width: 968px) {
   .footer {
     padding: 2rem 0 1rem;
