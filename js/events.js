@@ -7,7 +7,7 @@ const events = [
         date: "2025-11-24",
         startTime: "10:00",
         endTime: "20:00",
-        image: "assets/images/HappyFamilyShopping.jpg"
+        image: "https://thumbs.dreamstime.com/b/handing-homework-16677502.jpg"
     },
     {
         id: 2,
@@ -16,7 +16,7 @@ const events = [
         date: "2025-11-27",
         startTime: "14:00",
         endTime: "21:00",
-        image: "assets/images/HappyFamilyShopping.jpg"
+        image: "https://media.istockphoto.com/id/1041618802/photo/hear-me-out-on-this-one.jpg?s=612x612&w=0&k=20&c=WlAjoWNJxKAg-pVD_S575XAvLlp-yPuHlXps2RU6xWI="
     },
     {
         id: 3,
@@ -25,16 +25,16 @@ const events = [
         date: "2025-11-28",
         startTime: "18:00",
         endTime: "23:00",
-        image: "assets/images/TechStore.jpg"
+        image: "https://blog.agilenceinc.com/hubfs/stacking-discounts.png"
     },
     {
         id: 4,
         name: "Concierto de Año Nuevo",
         description: "Da la bienvenida al nuevo año con nuestro concierto especial. Artistas locales, comida deliciosa y una celebración inolvidable para toda la familia.",
-        date: "2025-11-28",
+        date: "2025-12-31",
         startTime: "20:00",
         endTime: "01:00",
-        image: "assets/images/HappyFamilyShopping.jpg"
+        image: "https://perapalace.com/wp-content/uploads/2023/12/dunyanin-farkli-yerlerinden-yilbasi-gelenekleri.jpg"
     },
     {
         id: 5,
@@ -43,16 +43,16 @@ const events = [
         date: "2025-12-21",
         startTime: "09:00",
         endTime: "22:00",
-        image: "assets/images/TechStore.jpg"
+        image: "https://i.guim.co.uk/img/media/fa99654930cbf4cc2ad46f3bc2c504c5d3a00924/0_265_5027_3017/master/5027.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=e96a12cfb8ceebfe286929c38148fa50"
     },
     {
         id: 6,
-        name: "Taller de Cocina",
-        description: "Aprende técnicas de cocina con chefs profesionales. Taller interactivo donde podrás aprender y degustar deliciosas recetas. Incluye materiales y degustación.",
+        name: "Taller de Cocina Familiar",
+        description: "Ven con tu familia y aprende a cocinar juntos. Conoce las mejores recetas y las técnicas de cocina para que puedas cocinar en casa.",
         date: "2026-01-06",
         startTime: "16:00",
         endTime: "18:00",
-        image: "assets/images/HappyFamilyShopping.jpg"
+        image: "https://foodal.com/wp-content/uploads/2023/02/Cooking-Benefits.jpg"
     },
     {
         id: 7,
@@ -61,7 +61,7 @@ const events = [
         date: "2026-01-21",
         startTime: "11:00",
         endTime: "19:00",
-        image: "assets/images/TechStore.jpg"
+        image: "https://cdn.5280.com/2020/09/Governors-Art-Show2.jpg"
     },
     {
         id: 8,
@@ -79,8 +79,46 @@ const events = [
         date: "2026-02-07",
         startTime: "12:00",
         endTime: "18:00",
-        image: "assets/images/TechStore.jpg"
+        image: "https://cdag.com.gt/wp-content/uploads/2025/06/ESports.jpeg"
+    },
+    {
+        id: 10,
+        name: "Evento Comidas Culturales",
+        description: "Disfruta de una variedad de comidas culturales. Desde comida mexicana hasta comida japonesa. Conoce los sabores de diferentes países.",
+        date: "2025-11-25",
+        startTime: "12:00",
+        endTime: "18:00",
+        image: "https://static1.squarespace.com/static/53b839afe4b07ea978436183/53bbeeb2e4b095b6a428a13e/5fd2570b51740e23cce97919/1763061467797/traditional-food-around-the-world-Travlinmad.jpg?format=1500w"
+    },
+    {
+        id: 11,
+        name: "Cumpleaños del Web Developer",
+        description: "Disfruta de una variedad de comidas culturales. Desde comida mexicana hasta comida japonesa. Conoce los sabores de diferentes países.",
+        date: "2026-02-01",
+        startTime: "12:00",
+        endTime: "18:00",
+        image: "https://bracegirdles.com.au/cdn/shop/files/Happy_Birthday.png?v=1742789481&width=1445"
+    },
+    {
+        id: 12,
+        name: "Evento UADE en el centro comercial",
+        description: "UADE tiene un evento en el centro comercial. Conoce los programas de UADE y los beneficios que te ofrece.",
+        date: "2025-11-25",
+        startTime: "10:00",
+        endTime: "18:00",
+        image: "https://tn.com.ar/resizer/v2/suspendieron-a-un-profesor-de-la-uade-por-una-avalancha-de-denuncias-de-acoso-V26D5DJX5ZNSHNVCTXNQH5CWUY.jpg?auth=29fbf6fd50a422cd82a3c23a447c3e4db5fc801da66a6aa6b4bbb95a50057dd2&width=767"
+    },
+    {
+        id: 13,
+        name: "Cumpleaños de Chamo",
+        description: "Feliz cumpleaños chamo, te deseamos un feliz cumpleaños y que disfrutes de tu dia.",
+        date: "2025-11-21",
+        startTime: "00:00",
+        endTime: "23:59",
+        image: "https://llevatilde.es/imagetexts/7/74/chamo.png"
     }
+
+
 ];
 
 function getEventsForDate(dateString) {

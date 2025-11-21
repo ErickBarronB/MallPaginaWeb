@@ -2,12 +2,12 @@ const promotions = [
     {
         id: 1,
         storeId: 2, // HUDZ
-        title: "Descuento Especial en Ropa Urbana",
-        description: "Disfruta de un 30% de descuento en toda la colección de streetwear y moda urbana. No te pierdas las últimas tendencias.",
-        discount: "30% OFF",
+        title: "Todo Gratis en Ropa Urbana",
+        description: "Profe, si nos aprobas te podes llevar todo gratis de esta tienda. Es la mejor ropa del mercado, hecha con los mejores materiales y con el mejor diseño.",
+        discount: "TODO GRATIS",
         validUntil: "31 de Diciembre, 2024",
         image: "assets/images/Urban.png",
-        badge: "NUEVO",
+        badge: "EXCLUSIVO",
         storeName: "HUDZ"
     },
     {
@@ -31,7 +31,30 @@ const promotions = [
         image: "assets/images/Comic.png",
         badge: "ESPECIAL",
         storeName: "Multiverse Figures"
+    },
+    {
+        id: 4,
+        storeId: 4, // Beauty Center
+        title: "Promoción de Belleza y Cosmética",
+        description: "Compra 1 producto de belleza y cosmética y obtén 10% de descuento en tu compra.",
+        discount: "10% OFF",
+        validUntil: "31 de Diciembre, 2025",
+        image: "assets/images/HappyFamilyShopping.jpg",
+        badge: "ESPECIAL",
+        storeName: "Beauty Center"
+    },
+    {
+        id: 5,
+        storeId: 5, // Sports Zone
+        title: "Promoción de Deportes y Fitness",
+        description: "Compra 1 producto deportivo y lleva el segundo gratis",
+        discount: "2x1",
+        validUntil: "31 de Diciembre, 2025",
+        image: "assets/images/HappyFamilyShopping.jpg",
+        badge: "ESPECIAL",
+        storeName: "Sports Zone"
     }
+
 ];
 
 function getStoreById(storeId) {
