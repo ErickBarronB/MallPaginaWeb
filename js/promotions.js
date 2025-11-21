@@ -34,14 +34,14 @@ const promotions = [
     },
     {
         id: 4,
-        storeId: 4, // Beauty Center
-        title: "Promoción de Belleza y Cosmética",
-        description: "Compra 1 producto de belleza y cosmética y obtén 10% de descuento en tu compra.",
-        discount: "10% OFF",
+        storeId: 4, 
+        title: "Promoción en Instrumentos Musicales",
+        description: "Compra 2 instrumentos musicales y obtén 10% de descuento en tu compra. Si compras 3 o más instrumentos, obtén 15% de descuento en tu compra.",
+        discount: "10/15% OFF",
         validUntil: "31 de Diciembre, 2025",
-        image: "assets/images/HappyFamilyShopping.jpg",
+        image: "https://lucatamasi.github.io/tpothemusicplace/img1.webp",
         badge: "ESPECIAL",
-        storeName: "Beauty Center"
+        storeName: "The Music Place"
     },
     {
         id: 5,

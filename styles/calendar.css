@@ -1,11 +1,25 @@
 .eventos-page {
-  background-color: #F3EFF5;
+  position: relative;
+  background: linear-gradient(45deg, rgba(114, 176, 29, 0.05) 0%, #F3EFF5 40%, rgba(243, 239, 245, 0.8) 80%, #454955 100%);
   padding: 4rem 2rem;
   min-height: 80vh;
+  overflow: hidden;
+}
+.eventos-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(114, 176, 29, 0.1) 0%, transparent 70%), radial-gradient(circle at 20% 70%, rgba(63, 125, 32, 0.08) 0%, transparent 50%);
+  z-index: 0;
 }
 .eventos-page-content {
   max-width: 1400px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .eventos-title {

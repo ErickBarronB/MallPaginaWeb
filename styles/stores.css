@@ -1,11 +1,25 @@
 .stores-page {
-  background-color: #F3EFF5;
+  position: relative;
+  background: linear-gradient(135deg, #F3EFF5 0%, rgba(243, 239, 245, 0.6) 50%, rgba(114, 176, 29, 0.1) 100%);
   padding: 4rem 2rem;
   min-height: 80vh;
+  overflow: hidden;
+}
+.stores-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 10% 20%, rgba(114, 176, 29, 0.12) 0%, transparent 50%), radial-gradient(circle at 90% 80%, rgba(63, 125, 32, 0.1) 0%, transparent 50%);
+  z-index: 0;
 }
 .stores-page-content {
   max-width: 1400px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .stores-title {

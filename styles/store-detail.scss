@@ -22,6 +22,7 @@ $green: #3F7D20;
             radial-gradient(circle at 15% 50%, rgba(114, 176, 29, 0.1) 0%, transparent 60%),
             radial-gradient(circle at 85% 50%, rgba(63, 125, 32, 0.08) 0%, transparent 50%);
         z-index: 0;
+        pointer-events: none;
     }
 
     &-content {
@@ -29,6 +30,7 @@ $green: #3F7D20;
         margin: 0 auto;
         position: relative;
         z-index: 1;
+        pointer-events: auto;
     }
 }
 
@@ -64,6 +66,9 @@ $green: #3F7D20;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+    pointer-events: auto;
 }
 
 .store-detail-card {

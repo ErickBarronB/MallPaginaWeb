@@ -31,12 +31,13 @@ const stores = [
     },
     {
         id: 4,
-        name: "Nike",
-        description: "Calzado, ropa y equipo deportivo de alta calidad",
-        image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&h=600&fit=crop",
-        link: "https://www.nike.com",
-        details: "Nike en Centro Arcadia ofrece la más amplia selección de calzado deportivo, ropa de entrenamiento y equipo deportivo. Desde running hasta baloncesto, tenemos todo para atletas de todos los niveles. Personal especializado te ayudará a encontrar el equipo perfecto para tu deporte favorito.",
-        keywords: ["nike", "deportes", "calzado", "ropa deportiva", "running", "baloncesto", "fútbol", "atletismo", "sneakers", "zapatillas"]
+        name: "The Music Place",
+        description: "Instrumentos y accesorios musicales de verdadera calidad",
+        image: "https://lucatamasi.github.io/tpothemusicplace/img1.webp",
+        link: "https://lucatamasi.github.io/tpothemusicplace/index.html",
+        details: "Un espacio dedicado a los amantes de la música. Encontrá instrumentos de calidad, accesorios y un ambiente pensado para que vivas la experiencia musical al máximo.",
+        keywords: ["música", "instrumentos", "guitarras", "teclados", "batería", "bajo", "accesorios musicales", "partituras", "audio", "tienda de música"],
+        hasPromo: true
     },
     {
         id: 5,
@@ -156,6 +157,16 @@ const stores = [
         link: "https://www.thebodyshop.com",
         details: "The Body Shop ofrece productos de belleza naturales y éticos. Desde cuidado de la piel hasta maquillaje, todos nuestros productos están hechos con ingredientes naturales y son cruelty-free. Comprometidos con el comercio justo y la sostenibilidad.",
         keywords: ["the body shop", "belleza natural", "cuidado de la piel", "cruelty-free", "ético", "natural", "skincare", "beauty", "cosméticos", "sostenible"],
+        hasPromo: false
+    },
+    {
+        id: 17,
+        name: "Nike",
+        description: "Calzado deportivo de alta calidad",
+        image: "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=800&h=600&fit=crop",
+        link: "https://www.nike.com",
+        details: "Nike es la tienda de calzado deportivo más popular. Encuentra las últimas colecciones de zapatillas, indumentaria para running, entrenamiento, fútbol, básquet y mucho más. Innovación, estilo y rendimiento para todos los deportes.",
+        keywords: ["nike", "zapatillas", "ropa deportiva", "tenis", "moda deportiva", "sneakers", "accesorios", "fútbol", "básquet", "running"],
         hasPromo: false
     }
 ];

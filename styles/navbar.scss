@@ -178,7 +178,7 @@ $green: #3F7D20;
     &-menu {
       position: fixed;
       left: -100%;
-      top: 80px;
+      top: 70px;
       flex-direction: column;
       background: linear-gradient(180deg, $onyx 0%, $charcoal-blue 100%);
       width: 100%;
@@ -195,11 +195,17 @@ $green: #3F7D20;
       li {
         width: 100%;
         margin: 0;
+        display: flex;
+        justify-content: center;
 
         a {
           padding: 1rem 2rem;
           border-radius: 0;
           width: 100%;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           &::after {
             display: none;

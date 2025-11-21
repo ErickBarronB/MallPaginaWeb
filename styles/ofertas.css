@@ -1,11 +1,25 @@
 .ofertas-page {
-  background-color: #F3EFF5;
+  position: relative;
+  background: linear-gradient(180deg, rgba(255, 200, 87, 0.1) 0%, #F3EFF5 30%, rgba(114, 176, 29, 0.08) 100%);
   padding: 4rem 2rem;
   min-height: 80vh;
+  overflow: hidden;
+}
+.ofertas-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 40%, rgba(255, 100, 100, 0.08) 0%, transparent 60%), radial-gradient(circle at 70% 60%, rgba(114, 176, 29, 0.1) 0%, transparent 50%);
+  z-index: 0;
 }
 .ofertas-page-content {
   max-width: 1400px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .ofertas-title {
