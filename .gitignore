@@ -2,3 +2,6 @@
 *.css.map
 *.sass.map
 *.scss.map
+
+# API Keys and Configuration (DO NOT COMMIT!)
+js/config.js

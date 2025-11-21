@@ -31,7 +31,6 @@ INSTRUCCIONES:
 - No inventes información que no sepas con certeza`;
     // ========================================
 
-    // Chat state
     let conversationHistory = [];
     let isLoading = false;
 
