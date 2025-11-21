@@ -1,0 +1,238 @@
+// Color Palette Variables
+$onyx: #0D0A0B;
+$charcoal-blue: #454955;
+$lavender-mist: #F3EFF5;
+$lime-moss: #72B01D;
+$green: #3F7D20;
+
+// Navbar Styles
+.navbar {
+  background: linear-gradient(135deg, $onyx 0%, $charcoal-blue 100%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+
+  &-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+
+  &-logo {
+    h1 {
+      color: $lavender-mist;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin: 0;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      transition: color 0.3s ease;
+      font-family: 'Lugrasimo', cursive;
+
+      &:hover {
+        color: $lime-moss;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+    align-items: center;
+
+    li {
+      position: relative;
+
+      a {
+        color: $lavender-mist;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        display: block;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 2px;
+          background: $lime-moss;
+          transition: width 0.3s ease;
+        }
+
+        &:hover {
+          color: $lime-moss;
+          background: rgba(114, 176, 29, 0.1);
+
+          &::after {
+            width: 80%;
+          }
+        }
+      }
+    }
+
+
+    li.active a {
+      color: $lime-moss;
+      background: rgba(114, 176, 29, 0.15);
+
+      &::after {
+        width: 80%;
+      }
+    }
+  }
+
+  &-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .search-btn {
+      background: transparent;
+      border: 2px solid $lavender-mist;
+      color: $lavender-mist;
+      padding: 0.6rem;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: $lime-moss;
+        border-color: $lime-moss;
+        color: $onyx;
+        transform: scale(1.1);
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      gap: 4px;
+
+      span {
+        width: 25px;
+        height: 3px;
+        background: $lavender-mist;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+
+      &:hover span {
+        background: $lime-moss;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 968px) {
+  .navbar {
+    &-container {
+      padding: 0 1.5rem;
+    }
+
+    &-menu {
+      position: fixed;
+      left: -100%;
+      top: 80px;
+      flex-direction: column;
+      background: linear-gradient(180deg, $onyx 0%, $charcoal-blue 100%);
+      width: 100%;
+      text-align: center;
+      transition: left 0.3s ease;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.5);
+      padding: 2rem 0;
+      gap: 0;
+
+      &.active {
+        left: 0;
+      }
+
+      li {
+        width: 100%;
+        margin: 0;
+
+        a {
+          padding: 1rem 2rem;
+          border-radius: 0;
+          width: 100%;
+
+          &::after {
+            display: none;
+          }
+
+          &:hover {
+            background: rgba(114, 176, 29, 0.2);
+          }
+        }
+      }
+    }
+
+    &-actions {
+      .menu-toggle {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    &-container {
+      padding: 0 1rem;
+      height: 70px;
+    }
+
+    &-logo {
+      h1 {
+        font-size: 1.4rem;
+      }
+    }
+
+    &-actions {
+      .search-btn {
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $lavender-mist;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+

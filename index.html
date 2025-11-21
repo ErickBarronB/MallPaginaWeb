@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/chat.css">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lugrasimo&family=Stack+Sans+Notch:wght@200..700&family=Titan+One&display=swap" rel="stylesheet">
+    <script src="js/navbar.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/chat-groq.js"></script>
+
+    <title>Centro Arcadia - Inicio</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <h1>Centro Arcadia</h1>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#tiendas">Tiendas</a></li>
+                <li><a href="#ofertas">Ofertas</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <button class="search-btn" aria-label="Buscar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+
+
+        <div class="first-container">
+
+            <div class="first-container-content">
+                <h1>Bienvenido a Arcadia</h1>
+                <video src="assets/videos/CentroArcadia2.mp4" autoplay muted loop playsinline class="first-container-video"></video>
+                <p class="first-container-slogan">Inspiracion en cada paso</p>
+            </div>
+
+        </div>
+
+        <div class="second-container">
+            <div class="second-container-content">
+                <h2>Tiendas</h2>
+                
+                <div class="stores-carousel">
+                    <button class="carousel-btn carousel-btn-prev" aria-label="Anterior">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track">
+                            <div class="carousel-slide active">
+                                <a href="https://www.example-fashion-store.com" target="_blank" rel="noopener noreferrer" class="store-card-link">
+                                    <div class="store-card">
+                                        <img src="assets/images/TechStore.jpg" alt="Striker Components">
+                                        <div class="store-info">
+                                            <h3>Striker Components</h3>
+                                            <p>Tecnologia y Electronica</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-slide">
+                                <a href="https://www.example-tech-store.com" target="_blank" rel="noopener noreferrer" class="store-card-link">
+                                    <div class="store-card">
+                                        <img src="assets/images/HappyFamilyShopping.jpg" alt="Tech Hub">
+                                        <div class="store-info">
+                                            <h3>Tech Hub</h3>
+                                            <p>Tecnología y Electrónica</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-slide">
+                                <a href="https://www.example-home-store.com" target="_blank" rel="noopener noreferrer" class="store-card-link">
+                                    <div class="store-card">
+                                        <img src="assets/images/HappyFamilyShopping.jpg" alt="Home & Decor">
+                                        <div class="store-info">
+                                            <h3>Home & Decor</h3>
+                                            <p>Hogar y Decoración</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-slide">
+                                <a href="https://www.example-sports-store.com" target="_blank" rel="noopener noreferrer" class="store-card-link">
+                                    <div class="store-card">
+                                        <img src="assets/images/HappyFamilyShopping.jpg" alt="Sports Zone">
+                                        <div class="store-info">
+                                            <h3>Sports Zone</h3>
+                                            <p>Deportes y Fitness</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-slide">
+                                <a href="https://www.example-beauty-store.com" target="_blank" rel="noopener noreferrer" class="store-card-link">
+                                    <div class="store-card">
+                                        <img src="assets/images/HappyFamilyShopping.jpg" alt="Beauty Center">
+                                        <div class="store-info">
+                                            <h3>Beauty Center</h3>
+                                            <p>Belleza y Cosmética</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-btn carousel-btn-next" aria-label="Siguiente">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                    
+                    <div class="carousel-indicators">
+                        <button class="indicator active" aria-label="Slide 1" data-slide="0"></button>
+                        <button class="indicator" aria-label="Slide 2" data-slide="1"></button>
+                        <button class="indicator" aria-label="Slide 3" data-slide="2"></button>
+                        <button class="indicator" aria-label="Slide 4" data-slide="3"></button>
+                        <button class="indicator" aria-label="Slide 5" data-slide="4"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section footer-about">
+                    <h3 class="footer-title">Centro Arcadia</h3>
+                    <p class="footer-description">
+                        Tu centro comercial de confianza. Descubre las mejores tiendas, ofertas exclusivas y eventos especiales.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section footer-links">
+                    <h4 class="footer-subtitle">Enlaces Rápidos</h4>
+                    <ul class="footer-list">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#tiendas">Tiendas</a></li>
+                        <li><a href="#ofertas">Ofertas</a></li>
+                        <li><a href="#eventos">Eventos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section footer-info">
+                    <h4 class="footer-subtitle">Información</h4>
+                    <ul class="footer-list">
+                        <li><a href="#horarios">Horarios</a></li>
+                        <li><a href="#ubicacion">Ubicación</a></li>
+                        <li><a href="#estacionamiento">Estacionamiento</a></li>
+                        <li><a href="#preguntas">Preguntas Frecuentes</a></li>
+                        <li><a href="#privacidad">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section footer-contact">
+                    <h4 class="footer-subtitle">Contacto</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Av. Principal 123, Ciudad</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>info@centroarcadia.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; 2024 Centro Arcadia. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="chat-widget">
+        <button class="chat-button" aria-label="Abrir chat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+        </button>
+        <div class="chat-window">
+            <div class="chat-header">
+                <h3>Asistente Virtual</h3>
+                <button class="chat-close" aria-label="Cerrar chat">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="chat-messages"></div>
+            <div class="chat-input-area">
+                <textarea class="chat-input" placeholder="Escribe tu mensaje..." rows="1"></textarea>
+                <button class="send-button" aria-label="Enviar mensaje">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
