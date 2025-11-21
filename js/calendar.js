@@ -288,7 +288,11 @@ function showEventModal(events) {
     renderEvent(0);
 
     modal.classList.add('show');
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
     document.body.style.overflow = 'hidden';
+    if (scrollbarWidth > 0) {
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+    }
 }
 
 
@@ -303,6 +307,7 @@ function closeEventModal() {
         
         modal.classList.remove('show');
         document.body.style.overflow = '';
+        document.body.style.paddingRight = '';
     }
 }
 

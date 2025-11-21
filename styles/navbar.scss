@@ -187,6 +187,7 @@ $green: #3F7D20;
       box-shadow: 0 10px 27px rgba(0, 0, 0, 0.5);
       padding: 2rem 0;
       gap: 0;
+      z-index: 9998;
 
       &.active {
         left: 0;
