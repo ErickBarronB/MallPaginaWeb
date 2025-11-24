@@ -6,35 +6,21 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/footer.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/mapa.css">
     <link rel="stylesheet" href="styles/search.css">
     <link rel="stylesheet" href="styles/chat.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lugrasimo&family=Stack+Sans+Notch:wght@200..700&family=Titan+One&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/stores.js"></script>
     <script src="js/search.js"></script>
     <script src="js/search-modal.js"></script>
     <script src="js/navbar.js"></script>
-    <script src="js/carousel.js"></script>
     <script src="js/chat-groq.js"></script>
+    <script src="js/mapa.js"></script>
 
     <title>Mapa Interactivo del Centro Comercial</title>
-    <style>
-        /* Estilos para marcadores visibles */
-        .marker {
-            position: absolute;
-            border: 2px solid red;
-            background: rgba(255, 0, 0, 0.3); /* Rojo semitransparente */
-            cursor: pointer;
-        }
-        .marker:hover {
-            background: rgba(255, 0, 0, 0.5); /* Más opaco al pasar mouse */
-        }
-        /* Ajusta según necesites */
-    </style>
-    <!-- Agrega jQuery desde CDN -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
        <nav class="navbar">
@@ -66,75 +52,37 @@
         </div>
     </nav>
     
-    <h1>Mapa del Centro Comercial</h1>
-    <img src="assets/images/MapaPrimerPiso.png" alt="Mapa del centro comercial" usemap="#mapa-locales" style="position: relative; width: 100%; max-width: 800px;">
-    <map name="mapa-locales">
-        <!-- Local 1: -->
-        <area shape="rect" coords="20,154,139,265" href="https://totesss.github.io/HUDZ-WEB-PAGE/" alt="Local 1 - Tienda de Ropa">
-        
-        <!-- Local 1: -->
-        <area shape="rect" coords="20,267,139,378" href="https://totesss.github.io/HUDZ-WEB-PAGE/" alt="Local 1 - Tienda de Ropa">
-
-        <!-- Local 1: -->
-        <area shape="rect" coords="20,379,139,491" href="https://totesss.github.io/HUDZ-WEB-PAGE/" alt="Local 1 - Tienda de Ropa">
-
-        <!-- Local 1: -->
-        <area shape="rect" coords="20,492,139,600" href="https://totesss.github.io/HUDZ-WEB-PAGE/" alt="Local 1 - Tienda de Ropa">
-
-        <!-- Local 1: -->
-        <area shape="rect" coords="20,600,139,690" href="https://totesss.github.io/HUDZ-WEB-PAGE/" alt="Local 1 - Tienda de Ropa">
-
-        <!-- Local 1: -->
-        <area shape="rect" coords="266,154,378,208" href="https://totesss.github.io/HUDZ-WEB-PAGE/" alt="Local 1 - Tienda de Ropa">
-
-        <!-- Local 1: -->
-        <area shape="rect" coords="266,210,378,264" href="https://totesss.github.io/HUDZ-WEB-PAGE/" alt="Local 1 - Tienda de Ropa">
-
-        <!-- Local 1: -->
-        <area shape="rect" coords="266,264,378,374" href="https://totesss.github.io/HUDZ-WEB-PAGE/" alt="Local 1 - Tienda de Ropa">
-
-        <!-- Local 2: Círculo (coords: centro_x,centro_y,radio) -->
-        <!-- <area shape="rect" coords="300,200,50" href="pagina-local2.html" alt="Local 2 - Cafetería"> -->
-        
-        <!-- Agrega más áreas según tus locales -->
-    </map>
-    
-    <!-- Script para dibujar marcadores visibles -->
-    <script>
-        $(document).ready(function() {
-            $('area').each(function() {
-                var coords = $(this).attr('coords').split(',');
-                var shape = $(this).attr('shape');
-                var href = $(this).attr('href');
+    <main>
+        <div class="mapa-page">
+            <h1 class="mapa-title">Mapa del Centro Comercial</h1>
+            
+            <div class="mapa-container">
+                <button class="mapa-nav-btn mapa-nav-prev" aria-label="Piso anterior">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
                 
-                if (shape === 'rect') {
-                    // Dibuja un rectángulo visible
-                    var div = $('<div class="marker rect"></div>');
-                    div.css({
-                        left: coords[0] + 'px',
-                        top: coords[1] + 'px',
-                        width: (coords[2] - coords[0]) + 'px',
-                        height: (coords[3] - coords[1]) + 'px'
-                    });
-                    div.click(function() { window.location.href = href; });
-                    $('img').after(div); // Agrega sobre la imagen
-                } else if (shape === 'circle') {
-                    // Dibuja un círculo visible
-                    var div = $('<div class="marker circle"></div>');
-                    div.css({
-                        left: (coords[0] - coords[2]) + 'px', // Centro menos radio
-                        top: (coords[1] - coords[2]) + 'px',
-                        width: (coords[2] * 2) + 'px', // Diámetro
-                        height: (coords[2] * 2) + 'px',
-                        borderRadius: '50%' // Hace circular
-                    });
-                    div.click(function() { window.location.href = href; });
-                    $('img').after(div);
-                }
-                // Agrega lógica para 'poly' si necesitas
-            });
-        });
-    </script>
+                <div class="mapa-slider-wrapper">
+                    <div class="mapa-slider" id="mapaSlider">
+                        <!-- Floor content will be dynamically inserted here -->
+                    </div>
+                </div>
+                
+                <button class="mapa-nav-btn mapa-nav-next" aria-label="Siguiente piso">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="mapa-floor-indicator">
+                <span class="floor-current">1</span>
+                <span class="floor-separator">/</span>
+                <span class="floor-total">2</span>
+            </div>
+        </div>
+    </main>
 
      <footer class="footer">
         <div class="footer-container">
@@ -227,6 +175,16 @@
             </div>
         </div>
     </footer>
+
+    <div class="map-widget">
+        <a href="mapa.html" class="map-button" aria-label="Ver mapa del centro comercial">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"></path>
+                <path d="M8 2v16"></path>
+                <path d="M16 6v16"></path>
+            </svg>
+        </a>
+    </div>
 
     <div class="chat-widget">
         <button class="chat-button" aria-label="Abrir chat">

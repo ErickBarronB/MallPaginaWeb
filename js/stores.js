@@ -40,14 +40,14 @@ const stores = [
         hasPromo: true
     },
     {
-        id: 5,
-        name: "Zara",
-        description: "Moda y ropa de tendencia para toda la familia",
-        image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
-        link: "https://www.zara.com",
-        details: "Zara te ofrece las últimas tendencias de la moda internacional. Nuestra tienda incluye colecciones para mujer, hombre y niños con diseños exclusivos que se actualizan constantemente. Moda rápida y accesible sin comprometer el estilo.",
-        keywords: ["zara", "moda", "ropa", "fashion", "mujer", "hombre", "niños", "tendencias", "estilo", "prêt-à-porter"],
-        hasPromo: false
+        id: 18,
+        name: "Local Nova",
+        description: "Productos Prácticos y Modernos",
+        image: "https://www.momat.go.jp/wp-content/uploads/2023/02/shop-1.jpg",
+        link: "https://matitevezzz.github.io/index.html",
+        details: "Local Nova es la tienda de productos prácticos y modernos. Encuentra las últimas colecciones de productos para el hogar, oficina, belleza, cuidado personal y más. Innovación, estilo y rendimiento para todos los productos.",
+        keywords: ["local nova", "productos prácticos", "productos modernos", "hogar", "oficina", "belleza", "cuidado personal", "productos", "productos para el hogar", "productos para la oficina"],
+        hasPromo: true
     },
     {
         id: 6,
@@ -167,6 +167,16 @@ const stores = [
         link: "https://www.nike.com",
         details: "Nike es la tienda de calzado deportivo más popular. Encuentra las últimas colecciones de zapatillas, indumentaria para running, entrenamiento, fútbol, básquet y mucho más. Innovación, estilo y rendimiento para todos los deportes.",
         keywords: ["nike", "zapatillas", "ropa deportiva", "tenis", "moda deportiva", "sneakers", "accesorios", "fútbol", "básquet", "running"],
+        hasPromo: false
+    },
+    {
+        id: 5,
+        name: "Zara",
+        description: "Moda y ropa de tendencia para toda la familia",
+        image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
+        link: "https://www.zara.com",
+        details: "Zara te ofrece las últimas tendencias de la moda internacional. Nuestra tienda incluye colecciones para mujer, hombre y niños con diseños exclusivos que se actualizan constantemente. Moda rápida y accesible sin comprometer el estilo.",
+        keywords: ["zara", "moda", "ropa", "fashion", "mujer", "hombre", "niños", "tendencias", "estilo", "prêt-à-porter"],
         hasPromo: false
     }
 ];

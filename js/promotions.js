@@ -46,13 +46,13 @@ const promotions = [
     {
         id: 5,
         storeId: 5, // Sports Zone
-        title: "Promoción de Deportes y Fitness",
-        description: "Compra 1 producto deportivo y lleva el segundo gratis",
+        title: "Promoción de Productos Prácticos y Modernos",
+        description: "Compra 1 producto práctico y lleva el segundo gratis",
         discount: "2x1",
         validUntil: "31 de Diciembre, 2025",
-        image: "assets/images/HappyFamilyShopping.jpg",
+        image: "https://www.momat.go.jp/wp-content/uploads/2023/02/shop-1.jpg",
         badge: "ESPECIAL",
-        storeName: "Sports Zone"
+        storeName: "Local Nova"
     }
 
 ];

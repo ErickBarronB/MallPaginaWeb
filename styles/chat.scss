@@ -17,6 +17,18 @@ $green: #3F7D20;
     }
 }
 
+.map-widget {
+    position: fixed;
+    bottom: 2rem;
+    right: 5.5rem;
+    z-index: 9999;
+
+    @media (max-width: 768px) {
+        bottom: 7rem;
+        right: 1rem;
+    }
+}
+
 .chat-button {
     width: 60px;
     height: 60px;
@@ -43,6 +55,48 @@ $green: #3F7D20;
 
     &.active {
         background: linear-gradient(135deg, $green 0%, $charcoal-blue 100%);
+    }
+
+    svg {
+        width: 28px;
+        height: 28px;
+        fill: white;
+        stroke: white;
+    }
+
+    @media (max-width: 768px) {
+        width: 55px;
+        height: 55px;
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+.map-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, $charcoal-blue 0%, $onyx 100%);
+    border: none;
+    box-shadow: 0 4px 20px rgba(13, 10, 11, 0.4);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 10001;
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 25px rgba(13, 10, 11, 0.6);
+    }
+
+    &:active {
+        transform: scale(0.95);
     }
 
     svg {
