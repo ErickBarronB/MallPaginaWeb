@@ -2,9 +2,9 @@ const promotions = [
     {
         id: 1,
         storeId: 2, // HUDZ
-        title: "Todo Gratis en Ropa Urbana",
-        description: "Profe, si nos aprobas te podes llevar todo gratis de esta tienda. Es la mejor ropa del mercado, hecha con los mejores materiales y con el mejor diseño.",
-        discount: "TODO GRATIS",
+        title: "2x1 en Ropa Urbana",
+        description: "Compra 2 prendas y obtén 1 gratis. Es la mejor ropa del mercado, hecha con los mejores materiales y con el mejor diseño.",
+        discount: "2x1",
         validUntil: "31 de Diciembre, 2024",
         image: "assets/images/Urban.png",
         badge: "EXCLUSIVO",
