@@ -15,6 +15,14 @@
   align-items: center;
   height: 80px;
 }
+.navbar-logo a {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+.navbar-logo a:hover {
+  text-decoration: none;
+}
 .navbar-logo h1 {
   color: #F3EFF5;
   font-size: 1.8rem;

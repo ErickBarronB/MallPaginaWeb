@@ -23,6 +23,16 @@ $green: #3F7D20;
   }
 
   &-logo {
+    a {
+      text-decoration: none;
+      display: block;
+      color: inherit;
+      
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
     h1 {
       color: $lavender-mist;
       font-size: 1.8rem;
