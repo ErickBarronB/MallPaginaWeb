@@ -4,44 +4,52 @@ const floors = [
         name: 'Primer Piso',
         image: 'assets/images/MapaPrimerPiso.png',
         areas: [
-            { shape: 'rect', coords: '10,50,88,126', href: 'https://totesss.github.io/HUDZ-WEB-PAGE/', alt: 'Local 1 - Tienda de Ropa' },
-            { shape: 'rect', coords: '10,130,88,207', href: 'https://erickbarronb.github.io/Striker', alt: 'Local 2 - Tienda de Computadoras' },
-            { shape: 'rect', coords: '10,208,88,283', href: 'https://pablitoort.github.io/Pagina-web-shooping', alt: 'Local 3 - Tienda de Figuras Coleccionables' },
-            { shape: 'rect', coords: '10,283,88,359', href: 'https://lucatamasi.github.io/tpothemusicplace/index.html', alt: 'Local 4 - Tienda de Instrumentos Musicales' },
-            { shape: 'rect', coords: '10,359,88,424', href: 'https://matitevezzz.github.io/index.html', alt: 'Local 5 - Tienda de Productos Prácticos y Modernos' },
-            { shape: 'rect', coords: '180,50,255,87', href: 'https://totesss.github.io/HUDZ-WEB-PAGE/', alt: 'Local 6 - Tienda de Ropa' },
-            { shape: 'rect', coords: '266,210,378,264', href: 'https://totesss.github.io/HUDZ-WEB-PAGE/', alt: 'Local 7 - Tienda de Ropa' },
-            { shape: 'rect', coords: '266,264,378,374', href: 'https://totesss.github.io/HUDZ-WEB-PAGE/', alt: 'Local 8 - Tienda de Ropa' }
+            { shape: 'rect', coords: '10,50,88,126', href: 'store-detail.html?id=2', alt: 'Local 1 - Tienda de Ropa' },
+            { shape: 'rect', coords: '10,130,88,207', href: 'store-detail.html?id=1', alt: 'Local 2 - Tienda de Computadoras' },
+            { shape: 'rect', coords: '10,208,88,283', href: 'store-detail.html?id=3', alt: 'Local 3 - Tienda de Figuras Coleccionables' },
+            { shape: 'rect', coords: '10,283,88,359', href: 'store-detail.html?id=4', alt: 'Local 4 - Tienda de Instrumentos Musicales' },
+            { shape: 'rect', coords: '10,359,88,424', href: 'store-detail.html?id=18', alt: 'Local 5 - Tienda de Productos Prácticos y Modernos' },
+            { shape: 'rect', coords: '180,50,255,87', href: 'servicios.html#atms-banks', alt: 'Local 6 - Tienda de Ropa' },
+            { shape: 'rect', coords: '180,87,255,125', href: 'servicios.html#atms-banks', alt: 'Local 7 - Tienda de Ropa' },
+            { shape: 'rect', coords: '180,126,255,202', href: 'store-detail.html?id=5', alt: 'Local 8 - Tienda de Ropa' },
+            { shape: 'rect', coords: '180,204,255,280', href: 'store-detail.html?id=6', alt: 'Local 8 - Tienda de Ropa' },
+            { shape: 'rect', coords: '180,282,255,356', href: 'store-detail.html?id=7', alt: 'Local 8 - Tienda de Ropa' },
+            { shape: 'rect', coords: '180,358,255,425', href: 'store-detail.html?id=8', alt: 'Local 8 - Tienda de Ropa' },
         ]
     },
-
     {
         id: 2,
         name: 'Segundo Piso',
-        image: 'assets/images/MapaPrimerPiso.png',
+        image: 'assets/images/MapaSegundoPiso.png',
         areas: [
-            { shape: 'rect', coords: '10,50,88,126', href: 'https://totesss.github.io/HUDZ-WEB-PAGE/', alt: 'Local 1 - Segundo Piso' },
-            { shape: 'rect', coords: '10,130,88,207', href: 'https://erickbarronb.github.io/Striker', alt: 'Local 2 - Segundo Piso' }
+            { shape: 'rect', coords: '194,27,350,168', href: 'servicios.html#Theater', alt: 'Local 1 - Segundo Piso' },
+            { shape: 'rect', coords: '151,172,225,310', href: 'servicios.html#BamLounge', alt: 'Local 2 - Segundo Piso' },
+            { shape: 'rect', coords: '325,172,400,310', href: 'servicios.html#Arcade', alt: 'Local 2 - Cuarto Piso' },
         ],
-
     },
-    
     {
         id: 4,
-        name: 'Estacionamiento Exterior',
-        image: 'assets/images/MapaPrimerPiso.png',
+        name: 'Tercer Piso',
+        image: 'assets/images/MapaTercerPiso.png',
         areas: [
-            { shape: 'rect', coords: '10,50,88,126', href: 'https://totesss.github.io/HUDZ-WEB-PAGE/', alt: 'Local 1 - Cuarto Piso' },
-            { shape: 'rect', coords: '10,130,88,207', href: 'https://erickbarronb.github.io/Striker', alt: 'Local 2 - Cuarto Piso' }
+            { shape: 'circle', coords: '125,165,125', href: 'servicios.html#food-court', alt: 'Local 2 - Cuarto Piso' },
+            { shape: 'rect', coords: '55,291,100,330', href: 'store-detail.html?id=9', alt: 'Local 1 - Cuarto Piso' },
+            { shape: 'rect', coords: '55,335,100,377', href: 'store-detail.html?id=10', alt: 'Local 2 - Cuarto Piso' },
+            { shape: 'rect', coords: '55,380,100,422', href: 'store-detail.html?id=11', alt: 'Local 2 - Cuarto Piso' },
+            { shape: 'rect', coords: '55,426,100,466', href: 'store-detail.html?id=12', alt: 'Local 2 - Cuarto Piso' },
+            { shape: 'rect', coords: '157,291,202,330', href: 'store-detail.html?id=13', alt: 'Local 1 - Cuarto Piso' },
+            { shape: 'rect', coords: '157,333,202,377', href: 'store-detail.html?id=14', alt: 'Local 2 - Cuarto Piso' },
+            { shape: 'rect', coords: '157,380,202,422', href: 'store-detail.html?id=15', alt: 'Local 2 - Cuarto Piso' },
+            { shape: 'rect', coords: '157,425,202,466', href: 'store-detail.html?id=17', alt: 'Local 2 - Cuarto Piso' },
         ]
     },
     {
         id: 5,
-        name: 'Estacionamiento Interior',
-        image: 'assets/images/MapaPrimerPiso.png',
+        name: 'Estacionamiento',
+        image: 'assets/images/MapaEstacionamiento.png',
         areas: [
-            { shape: 'rect', coords: '10,50,88,126', href: 'https://totesss.github.io/HUDZ-WEB-PAGE/', alt: 'Local 1 - Cuarto Piso' },
-            { shape: 'rect', coords: '10,130,88,207', href: 'https://erickbarronb.github.io/Striker', alt: 'Local 2 - Cuarto Piso' }
+            { shape: 'rect', coords: '6,30,253,319', href: 'servicios.html#parking', alt: 'Local 1 - Cuarto Piso' },
+            { shape: 'rect', coords: '357,38,559,337', href: 'servicios.html#parking', alt: 'Local 2 - Cuarto Piso' }
         ]
     }
 ];
