@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    const GROQ_API_KEY = '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';
+    const GROQ_API_KEY = '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';
     const GROQ_MODEL = 'llama-3.1-8b-instant';
     
     const CHATBOT_INSTRUCTIONS = `Eres el asistente virtual de Centro Arcadia, un centro comercial moderno.
